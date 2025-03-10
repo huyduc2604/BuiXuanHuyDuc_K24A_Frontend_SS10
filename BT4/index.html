@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - John</title>
+    
+    <style>
+        /* ====== CÀI ĐẶT CHUNG ====== */
+        body {
+            font-family: Arial, sans-serif; /* Chọn font chữ dễ đọc */
+            background-color: #fbe9d0; /* Đặt màu nền là màu be nhạt */
+            margin: 0; /* Xóa khoảng trắng mặc định */
+            padding: 0;
+        }
+
+        /* ====== THANH ĐIỀU HƯỚNG (NAVBAR) ====== */
+        header {
+            display: flex;
+            justify-content: flex-end; /* Đưa menu về phía bên phải */
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none; /* Bỏ dấu chấm trước danh sách */
+            display: flex;
+            gap: 20px; /* Khoảng cách giữa các mục */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline; /* Hiển thị danh sách trên cùng một hàng */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Bỏ gạch chân */
+            color: #333; /* Màu chữ xám đậm */
+            font-weight: bold; /* Chữ đậm */
+        }
+
+        /* ====== PHẦN GIỚI THIỆU (HERO SECTION) ====== */
+        .hero {
+            display: flex;
+            align-items: center; /* Căn giữa theo chiều dọc */
+            justify-content: space-between; /* Nội dung và ảnh ở hai bên */
+            padding: 50px;
+            max-width: 1100px;
+            margin: auto; /* Căn giữa trang */
+        }
+
+        /* ====== NỘI DUNG VĂN BẢN (BÊN TRÁI) ====== */
+        .hero-text {
+            max-width: 500px; /* Giới hạn chiều rộng để không bị quá dài */
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Tạo màu nổi bật cho chữ "Creative Technologist" */
+        h1 span {
+            color: #0077cc;
+        }
+
+        .hero-text p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6; /* Tăng khoảng cách dòng giúp dễ đọc */
+        }
+
+        /* ====== NÚT "DOWNLOAD RESUME" ====== */
+        .resume-btn {
+            background-color: #ff5252; /* Màu đỏ nổi bật */
+            color: white; /* Chữ màu trắng */
+            padding: 12px 20px;
+            border: none; /* Bỏ viền */
+            border-radius: 5px; /* Bo góc nhẹ */
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s; /* Tạo hiệu ứng hover */
+        }
+
+        /* Khi di chuột vào nút */
+        .resume-btn:hover {
+            background-color: #e04747; /* Màu đỏ đậm hơn */
+        }
+
+        /* ====== ẢNH ĐẠI DIỆN (BÊN PHẢI) ====== */
+        .hero-image img {
+            width: 200px; /* Định kích thước ảnh */
+            height: 200px;
+            border-radius: 50%; /* Làm ảnh tròn */
+            object-fit: cover; /* Cắt ảnh vừa khung */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Tạo hiệu ứng bóng */
+        }
+
+        /* ====== ĐÁP ỨNG MÀN HÌNH NHỎ (RESPONSIVE) ====== */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column; /* Xếp nội dung theo cột trên màn hình nhỏ */
+                text-align: center;
+            }
+
+            /* .hero-image { */
+                /* margin-top: 20px; Tạo khoảng cách giữa nội dung và ảnh */
+                /* width: 200px; Định kích thước ảnh */
+                /* height: 200px; */
+                /* border-radius: 50%; Làm ảnh tròn */
+                /* object-fit: cover; Cắt ảnh vừa khung */
+                /* border: 6px solid white; Thêm viền trắng */
+                /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); Tạo bóng giúp ảnh nổi bật */
+            /* } */
+        }
+    </style>
+</head>
+<body>
+    <!-- ====== THANH ĐIỀU HƯỚNG (NAVBAR) ====== -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ====== PHẦN GIỚI THIỆU (HERO SECTION) ====== -->
+    <section class="hero">
+        <!-- Bên trái: Nội dung văn bản -->
+        <div class="hero-text">
+            <h1>Hi, I am John,<br><span>Creative Technologist</span></h1>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+               Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <button class="resume-btn">Download Resume</button>
+        </div>
+        
+        <!-- Bên phải: Ảnh đại diện -->
+        <div class="hero-image">
+            <img src="/BT4/Screenshot 2025-03-10 094158.png" alt="John's Photo">
+        </div>
+    </section>
+</body>
+</html>
