@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Import font từ Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+        
+        /* Cài đặt chung cho trang web */
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Sử dụng font chữ dễ đọc */
+            margin: 0; /* Loại bỏ margin mặc định */
+        }
+        
+        /* Thanh điều hướng (Navbar) */
+        .navbar {
+            display: flex; /* Sử dụng flexbox để bố trí các phần tử */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            justify-content: space-between; /* Căn hai đầu (logo bên trái, menu giữa, tìm kiếm bên phải) */
+            padding: 10px 20px; /* Khoảng cách bên trong */
+            background-color: #f2f2f2; /* Màu nền của navbar */
+        }
+        
+        /* Logo của trang web */
+        .navbar .logo {
+            font-family: "Zeyada", cursive; /* Sử dụng font Zeyada */
+            font-weight: 400; /* Độ đậm của chữ */
+            font-style: italic; /* In nghiêng */
+            font-size: 30px; /* Cỡ chữ */
+            font-weight: bold; /* Chữ đậm */
+        }
+        
+        /* Danh sách liên kết trong thanh điều hướng */
+        .navbar .nav-links {
+            list-style: none; /* Loại bỏ kiểu danh sách (dấu chấm) */
+            display: flex; /* Sử dụng flexbox để hiển thị ngang */
+            gap: 20px; /* Khoảng cách giữa các mục */
+            margin: 0; /* Loại bỏ margin mặc định */
+            padding: 0; /* Loại bỏ padding mặc định */
+        }
+        
+        /* Mục trong danh sách điều hướng */
+        .navbar .nav-links li {
+            display: inline; /* Hiển thị trên cùng một dòng */
+        }
+        
+        /* Liên kết trong danh sách */
+        .navbar .nav-links a {
+            text-decoration: none; /* Loại bỏ gạch chân */
+            color: rgb(111, 108, 108); /* Màu chữ mặc định */
+            font-size: 16px; /* Cỡ chữ */
+        }
+        
+        /* Định dạng đặc biệt cho mục đầu tiên (Home) */
+        .navbar .nav-links li:first-child a {
+            color: black; /* Màu đen nổi bật */
+        }
+        
+        /* Ô tìm kiếm */
+        .navbar .search {
+            display: flex; /* Sử dụng flexbox để bố trí ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            gap: 5px; /* Khoảng cách giữa các phần tử */
+        }
+        
+        /* Nút tìm kiếm */
+        .navbar .search button {
+            background-color: #777; /* Màu nền */
+            color: white; /* Màu chữ */
+            border: none; /* Loại bỏ viền */
+            padding: 5px 10px; /* Khoảng cách bên trong */
+            border-radius: 5px; /* Bo tròn góc */
+            cursor: pointer; /* Biểu tượng con trỏ khi rê chuột vào */
+        }
+    </style>
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav class="navbar">
+        <div class="logo">Sport News</div> <!-- Logo của trang -->
+        <ul class="nav-links">
+            <li><a href="#"><b>Home</b></a></li> <!-- Trang chủ -->
+            <li><a href="#">Category</a></li> <!-- Mục thể loại -->
+            <li><a href="#">Trending News</a></li> <!-- Tin tức nổi bật -->
+            <li><a href="#">Recent News</a></li> <!-- Tin tức gần đây -->
+            <li><a href="#">Clubs Ranking</a></li> <!-- Xếp hạng câu lạc bộ -->
+            <li><a href="#">Sports Article</a></li> <!-- Bài viết thể thao -->
+        </ul>
+        
+        <!-- Ô tìm kiếm -->
+        <div class="search">
+            <button>⌕ Search</button> <!-- Nút tìm kiếm -->
+        </div>
+    </nav>
+</body>
+</html>
