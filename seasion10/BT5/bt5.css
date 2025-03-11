@@ -1,0 +1,135 @@
+/* Reset toàn bộ các thuộc tính margin, padding về 0 để tránh lỗi hiển thị khác nhau trên trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Đảm bảo kích thước phần tử bao gồm cả border và padding */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Font mặc định */
+}
+
+/* Định dạng cho phần body */
+body {
+  display: flex; /* Sử dụng flexbox để căn giữa nội dung */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  min-height: 100vh; /* Đảm bảo body luôn chiếm ít nhất toàn bộ chiều cao của màn hình */
+  background-color: white; /* Màu nền trắng */
+  padding: 1rem; /* Khoảng cách viền ngoài */
+}
+
+/* Container chính chứa toàn bộ nội dung */
+.container {
+  max-width: 900px; /* Giới hạn chiều rộng tối đa là 900px */
+  width: 100%; /* Chiếm toàn bộ chiều rộng có thể */
+  background-color: #c0c0c0; /* Màu nền xám */
+  padding: 2rem; /* Khoảng cách bên trong */
+  border-radius: 8px; /* Bo tròn góc */
+}
+
+/* Tiêu đề "Featured Works" */
+.title {
+  font-size: 1.5rem; /* Cỡ chữ 1.5 rem */
+  font-weight: 500; /* Độ đậm chữ trung bình */
+  color: #444; /* Màu chữ xám đậm */
+  margin-bottom: 2rem; /* Khoảng cách phía dưới */
+}
+
+/* Mỗi phần tử công việc */
+.work-item {
+  display: flex; /* Sử dụng flexbox để hiển thị hình ảnh và nội dung theo chiều ngang */
+  gap: 1.5rem; /* Khoảng cách giữa ảnh và nội dung */
+  margin-bottom: 2rem; /* Khoảng cách giữa các công việc */
+}
+
+/* Phần chứa hình ảnh công việc */
+.work-image {
+  width: 250px; /* Chiều rộng cố định */
+  height: 180px; /* Chiều cao cố định */
+  border-radius: 8px; /* Bo tròn góc */
+  overflow: hidden; /* Ẩn phần dư thừa của ảnh */
+  flex-shrink: 0; /* Không cho phép hình ảnh bị thu nhỏ */
+}
+
+/* Hình ảnh bên trong */
+.work-image img {
+  width: 100%; /* Ảnh luôn chiếm toàn bộ khung chứa */
+  height: 100%; /* Ảnh luôn chiếm toàn bộ khung chứa */
+  object-fit: cover; /* Đảm bảo ảnh không bị méo khi thay đổi kích thước */
+}
+
+/* Tiêu đề của mỗi công việc */
+.work-content h3 {
+  font-size: 1.25rem; /* Cỡ chữ */
+  font-weight: 500; /* Độ đậm chữ */
+  color: #333; /* Màu chữ xám đậm */
+  margin-bottom: 0.5rem; /* Khoảng cách phía dưới */
+}
+
+/* Phần meta thông tin của công việc */
+.work-meta {
+  display: flex; /* Hiển thị theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  gap: 1rem; /* Khoảng cách giữa năm và danh mục */
+  margin-bottom: 0.75rem; /* Khoảng cách phía dưới */
+}
+
+/* Thẻ hiển thị năm */
+.year-tag {
+  background-color: #1a365d; /* Màu nền xanh đậm */
+  color: white; /* Màu chữ trắng */
+  padding: 0.25rem 0.75rem; /* Khoảng cách bên trong */
+  border-radius: 999px; /* Bo tròn hoàn toàn */
+  font-size: 0.875rem; /* Cỡ chữ nhỏ hơn */
+}
+
+/* Danh mục công việc */
+.category {
+  color: #666; /* Màu chữ xám nhạt */
+}
+
+/* Đoạn mô tả công việc */
+.work-description {
+  color: #444; /* Màu chữ xám đậm */
+  line-height: 1.5; /* Giãn dòng giúp dễ đọc */
+}
+
+/* Đường phân cách giữa các công việc */
+.divider {
+  height: 1px; /* Chiều cao 1px */
+  background-color: #aaa; /* Màu xám */
+  margin: 1.5rem 0; /* Khoảng cách trên và dưới */
+}
+
+/* Phần chứa các icon mạng xã hội */
+.social-icons {
+  display: flex; /* Sử dụng flexbox */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  gap: 2rem; /* Khoảng cách giữa các icon */
+  margin-top: 3rem; /* Khoảng cách phía trên */
+}
+
+/* Các icon mạng xã hội */
+.social-icons i {
+  font-size: 1.5rem; /* Cỡ chữ lớn hơn */
+  color: #333; /* Màu xám đậm */
+}
+
+/* Phần bản quyền */
+.copyright {
+  text-align: center; /* Căn giữa chữ */
+  margin-top: 1rem; /* Khoảng cách phía trên */
+  font-size: 0.875rem; /* Cỡ chữ nhỏ */
+  color: #666; /* Màu xám nhạt */
+}
+
+/* Responsive: Khi màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  /* Đổi layout từ ngang sang dọc */
+  .work-item {
+      flex-direction: column; /* Xếp chồng các phần tử theo chiều dọc */
+  }
+  
+  /* Hình ảnh chiếm toàn bộ chiều rộng */
+  .work-image {
+      width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+  }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bt5</title>
+    <link rel="stylesheet" href="./bt5.css">
+    <style>
+        /* Reset CSS & Thiết lập font chữ mặc định cho toàn bộ trang */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Giúp đảm bảo padding và border không ảnh hưởng đến kích thước tổng thể */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        /* Thiết lập giao diện chung của body để căn giữa nội dung */
+        body {
+            background-color: #f5f5f7; /* Màu nền nhạt */
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            min-height: 100vh; /* Chiều cao tối thiểu là 100% chiều cao màn hình */
+            padding: 20px; /* Thêm khoảng cách để tránh bị dính sát mép */
+        }
+
+        /* Thiết kế thẻ chứa thông tin gói cước */
+        .plan-card {
+            width: 100%;
+            max-width: 320px; /* Giới hạn chiều rộng tối đa */
+            background: white; /* Màu nền trắng */
+            border-radius: 10px; /* Bo tròn góc thẻ */
+            overflow: hidden; /* Ẩn nội dung bị tràn ra ngoài */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Đổ bóng nhẹ */
+        }
+
+        /* Phần đầu của thẻ (chứa tên gói cước) */
+        .card-header {
+            background: #E31837; /* Màu nền đỏ */
+            color: white; /* Màu chữ trắng */
+            padding: 15px; /* Khoảng cách bên trong */
+            position: relative; /* Giữ vị trí để đặt nhãn giảm giá */
+            text-align: center; /* Căn giữa nội dung */
+            font-size: 24px; /* Cỡ chữ lớn */
+            font-weight: bold; /* Chữ đậm */
+        }
+
+        /* Nhãn giảm giá (HOT label) */
+        .hot-label {
+            position: absolute;
+            top: -20px; /* Đưa nhãn lên trên so với header */
+            right: -40px; /* Dịch sang phải */
+            padding: 5px 10px;
+            border-radius: 5px;
+            transform: rotate(-10deg); /* Xoay nhẹ nhãn để tạo hiệu ứng đẹp */
+            font-weight: bold;
+            font-size: 14px;
+            color: #E31837;
+        }
+
+        /* Nội dung chi tiết của gói cước */
+        .plan-details {
+            padding: 20px; /* Khoảng cách nội dung bên trong */
+        }
+
+        /* Mỗi mục chi tiết trong gói cước */
+        .detail-item {
+            padding: 12px 0; /* Khoảng cách trên dưới */
+            border-bottom: 1px solid #eee; /* Đường kẻ phân cách */
+            display: flex;
+            justify-content: space-between; /* Căn 2 phần tử cách xa nhau */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            line-height: 1.4; /* Tăng khoảng cách dòng */
+        }
+
+        /* Xóa đường kẻ cuối cùng của danh sách */
+        .detail-item:last-of-type {
+            border-bottom: none;
+        }
+
+        /* Phần nhãn (label) của mục chi tiết */
+        .detail-label {
+            color: #666; /* Màu chữ xám nhạt */
+        }
+
+        /* Giá trị của mỗi mục chi tiết (nổi bật hơn) */
+        .detail-value {
+            color: #FF6B00; /* Màu cam nổi bật */
+            font-weight: 500; /* Đậm hơn để thu hút sự chú ý */
+        }
+
+        /* Lưu ý về cách sử dụng gói cước */
+        .usage-note {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        /* Nhóm nút bấm ở dưới cùng */
+        .button-group {
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Các nút xếp chồng dọc */
+            gap: 10px; /* Khoảng cách giữa các nút */
+        }
+
+        /* Thiết kế chung của nút */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        /* Nút chính (Đăng ký) màu đỏ */
+        .btn-primary {
+            background: #E31837;
+            color: white;
+        }
+
+        /* Nút phụ (Chi tiết) màu trắng có viền đỏ */
+        .btn-secondary {
+            background: white;
+            color: #E31837;
+            border: 1px solid #E31837;
+        }
+
+        /* Hiệu ứng hover khi di chuột vào nút */
+        .btn:hover {
+            opacity: 0.9; /* Giảm độ sáng nhẹ để tạo hiệu ứng tương tác */
+        }
+    </style>
+</head>
+<body>
+    <div class="plan-card">
+        <!-- Tiêu đề gói cước -->
+        <div class="card-header">
+            5G160B <!-- Tên gói cước -->
+            <div class="hot-label">
+                <img src="https://goicuoc5gviettel.net/public/images/icon_giamgia.png" alt=""> <!-- Hình ảnh nhãn giảm giá -->
+            </div>
+        </div>
+
+        <!-- Các chi tiết của gói cước -->
+        <div class="plan-details">
+            <div class="detail-item"><span class="detail-label">Data:</span><span class="detail-value">120GB (4Gb/ngày)</span></div>
+            <div class="detail-item"><span class="detail-label">Giá:</span><span class="detail-value">160.000 đ</span></div>
+            <div class="detail-item"><span class="detail-label">Nội mạng:</span><span class="detail-value">&lt;10 phút (tối đa 1000 phút/30 ngày)</span></div>
+            <div class="detail-item"><span class="detail-label">Ngoại mạng:</span><span class="detail-value">100 phút</span></div>
+            <div class="detail-item"><span class="detail-label">Free data:</span><span class="detail-value">TV360 Basic, 20GB lưu trữ Mybox</span></div>
+            <div class="detail-item"><span class="detail-label">Thời hạn:</span><span class="detail-value">30 ngày</span></div>
+        </div>
+        <div class="usage-note">(Sử dụng 4GB/ngày)</div>
+        <div class="button-group">
+            <a href="#" class="btn btn-primary">ĐĂNG KÝ</a>
+            <a href="#" class="btn btn-secondary">Chi tiết</a>
+        </div>
+    </div>
+</body>
+</html>

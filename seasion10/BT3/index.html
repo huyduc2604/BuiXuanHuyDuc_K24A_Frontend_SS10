@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Article</title>
+    <style>
+        /* ======= CÀI ĐẶT CHUNG ======= */
+        body {
+            font-family: Arial, sans-serif; /* Chọn font chữ dễ đọc */
+            background-color: #f8f9fa; /* Màu nền sáng */
+            display: flex;               /* Hiển thị theo hàng ngang */
+            justify-content: center;     /* Căn giữa theo chiều ngang */
+            align-items: center;         /* Căn giữa theo chiều dọc */
+            height: 100vh;               /* Chiều cao cửa sổ */
+            margin: 0;                   /* Xóa khoảng trắng mặc định */
+        }
+
+        /* ======= THẺ CHỨA TOÀN BỘ BÀI VIẾT ======= */
+        .article-card {
+            width: 400px; /* Chiều rộng cố định */
+            background-color: white;
+            border-radius: 12px; /* Bo tròn góc */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+            overflow: hidden; /* Ẩn phần dư của ảnh */
+        }
+
+        /* ======= ẢNH ĐẦU BÀI VIẾT ======= */
+        .article-image {
+            position: relative;   /* Để nhãn thể loại nằm trên ảnh */
+        }
+
+        .article-image img {
+            width: 100%; /* Ảnh chiếm toàn bộ chiều rộng */
+            height: auto;
+            display: block;
+        }
+
+        /* ======= NHÃN THỂ LOẠI (Basketball) ======= */
+        .category-label {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            color:#f8f9fa;
+            padding: 5px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ======= NỘI DUNG BÀI VIẾT ======= */
+        .article-content {
+            padding: 20px; 
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .author img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* Ảnh đại diện tròn */
+            margin-right: 10px;
+        }
+
+        .author-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .date {
+            font-size: 14px;
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        .article-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .article-description {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ======= BÀI VIẾT ======= -->
+    <div class="article-card">
+        <!-- Hình ảnh bài viết -->
+        <div class="article-image">
+            <img src="/BT3/Screenshot 2025-03-10 092749.png" alt="Basketball Image">
+            <!-- <div class="category-label">Basketball</div> -->
+        </div>
+
+        <!-- Nội dung bài viết -->
+        <div class="article-content">
+            <!-- Tác giả -->
+            <div class="author">
+                <img src="https://snworksceo.imgix.net/dtc/27df5e7c-ffd8-4bb3-829d-5f740bf953a2.sized-1000x1000.jpg?w=1000" alt="Jake Will.">
+                <span class="author-name">Jake Will.</span>
+            </div>
+
+            <!-- Ngày đăng -->
+            <div class="date">04 June 2023</div>
+
+            <!-- Tiêu đề bài viết -->
+            <div class="article-title">
+                5 Exercises Basketball Players Should Be Using To Develop Strength
+            </div>
+
+            <!-- Mô tả bài viết -->
+            <div class="article-description">
+                This article was written by Jake Willhoite from Healthlisted.com. Strength in basketball isn’t all about massive body mass or ripped muscles.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

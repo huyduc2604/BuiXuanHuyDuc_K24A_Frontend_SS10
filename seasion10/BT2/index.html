@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            background-color: rgb(249, 244, 244); /* Màu nền xám nhạt */   
+        }
+        /* ======= CÀI ĐẶT CHUNG ======= */
+        .head {
+            display: flex; /* Sử dụng flexbox để hiển thị các danh mục theo hàng ngang */
+            gap: 10px; /* Khoảng cách giữa các mục */
+
+        }
+
+        /* ======= KÍCH THƯỚC VÀ CĂN CHỈNH ẢNH ======= */
+        .img1 img {
+            width: 320px; /* Độ rộng ảnh */
+            height: 255px; /* Chiều cao ảnh */
+            margin: 10px; /* Khoảng cách xung quanh ảnh */
+        }
+
+        .img2 img {
+            width: 320px;
+            height: 200px;
+            margin: 10px;
+        }
+
+        /* ======= ĐỊNH DẠNG CHO TIÊU ĐỀ CÁC MÔN THỂ THAO ======= */
+        p {
+            font-weight: bold; /* Chữ in đậm */
+            font-size: 33px; /* Cỡ chữ */
+            background: linear-gradient(to bottom, #232323, #aeaeae); /* Hiệu ứng chuyển màu */
+            color: transparent;        /* Ẩn màu chữ để dùng hiệu ứng background-clip */
+            display: flex;             /* Sử dụng flexbox */
+            justify-content: center;   /* Căn giữa theo chiều ngang */
+            text-align: center;        /* Căn giữa nội dung */
+            padding-bottom: 20px;      /* Khoảng cách dưới */
+            margin: 10px;              /* Khoảng cách xung quanh */
+            background-color: black; /* Màu nền đen */
+            background-clip: text;     /* Giúp nền gradient chỉ hiển thị trên chữ */
+        }
+
+        /* ======= TIÊU ĐỀ CHÍNH ======= */
+        h2 {
+            /* font-weight: bold; */
+            margin-left: 10px; /* Khoảng cách lề trái */
+            
+        }
+
+        /* ======= ĐỊNH DẠNG HỘP CHỨA TÊN MÔN THỂ THAO ======= */
+        .bgcolor1 {
+            margin: 10px;            /* Khoảng cách xung quanh */
+            display: flex;           /* Sử dụng flexbox */
+            justify-content: center; /* Căn giữa nội dung */
+            text-align: center;      /* Căn giữa nội dung */
+            background-color: #ebeef3; /* Màu nền xám nhạt */
+            width: 320px;            /* Độ rộng hộp */
+            height: 60px;            /* Chiều cao hộp */
+            border-radius: 10px;     /* Bo tròn góc */
+        }
+
+        .bgcolor2 {
+            margin: 10px;            /* Khoảng cách xung quanh */
+            display: flex;           /* Sử dụng flexbox */
+            justify-content: center; /* Căn giữa nội dung */
+            text-align: center;      /* Căn giữa nội dung */
+            background-color: #ebeef3; /* Màu nền xám nhạt */
+            width: 320px;            /* Độ rộng hộp */
+            height: 110px;           /* Hộp này cao hơn để chứa 2 dòng chữ */
+            border-radius: 10px;     /* Bo tròn góc */
+        } 
+    </style>
+</head>
+<body>
+    <div class="div">
+        <!-- Tiêu đề danh mục thể thao -->
+        <h2>Category</h2>
+        <div class="head"> <!-- Phần hiển thị danh mục thể thao theo hàng ngang -->
+            <!-- FOOTBALL -->
+            <div class="img1">
+                <div class="bgcolor1"><p>FOOTBALL</p></div> <!-- Hộp chứa tiêu đề -->
+                <img src="https://cdn-media.sforum.vn/storage/app/media/wp-content/uploads/2023/06/hinh-nen-bong-da-thumb.jpg" alt="Football"> <!-- Ảnh -->
+            </div>
+
+            <!-- BASKETBALL -->
+            <div class="img2">
+                <img src="https://img.lovepik.com/photo/40089/3074.jpg_wh860.jpg" alt="Basketball"> <!-- Ảnh -->
+                <div class="bgcolor2"><p>BASCKET <br> BALL</p></div> <!-- Hộp chứa tiêu đề có 2 dòng -->
+            </div>
+
+            <!-- CAR SPORT -->
+            <div class="img1">
+                <div class="bgcolor1"><p>CAR SPORT</p></div>
+                <img src="https://media.vietnamplus.vn/images/7255a701687d11cb8c6bbc58a6c807856d118620e1f576ae19ef370328401ea995fff91bd7f0d92ae095fc57c60a0591/604135.jpg" alt="Car Sport">
+            </div>
+
+            <!-- TABLE TENNIS -->
+            <div class="img2">
+                <img src="https://img.pikbest.com/wp/202405/ping-pong-table-3d-illustration-of-tennis-or-rackets-ball-and-net-on-a-poster-two_9848028.jpg!sw800" alt="Table Tennis">
+                <div class="bgcolor2"><p>TABLE <br> TENNIS</p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

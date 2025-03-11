@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8"> <!-- Đặt bộ mã ký tự UTF-8 để hỗ trợ tiếng Việt -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Giúp trang web hiển thị tốt trên các thiết bị di động -->
+    <title>Magna leo sapien gravida</title> <!-- Tiêu đề hiển thị trên tab trình duyệt -->
+    
+    <!-- Liên kết tệp CSS bên ngoài -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Liên kết Font Awesome để sử dụng icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Reset các thuộc tính mặc định của trình duyệt */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif; /* Font chữ mặc định */
+        }
+
+        /* Định dạng phần container chính */
+        .container {
+            text-align: center; /* Căn giữa nội dung */
+            padding: 50px 20px; /* Khoảng cách lề trong */
+            background-color: #f8f9fa; /* Màu nền xám nhạt */
+        }
+
+        /* Định dạng tiêu đề */
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333; /* Màu chữ đậm */
+            margin-bottom: 15px; /* Khoảng cách dưới */
+        }
+
+        /* Định dạng đoạn văn bản */
+        p {
+            font-size: 16px;
+            color: #666; /* Màu chữ xám nhạt */
+            margin-bottom: 25px; /* Khoảng cách dưới */
+        }
+
+        /* Thanh ngăn cách */
+        .separator {
+            width: 50px;
+            height: 2px;
+            background-color: #ddd; /* Màu xám nhạt */
+            margin: 0 auto 20px; /* Căn giữa và tạo khoảng cách */
+        }
+
+        /* Chứa các nút bấm */
+        .buttons {
+            display: flex;
+            justify-content: center; /* Căn giữa các nút */
+            gap: 15px; /* Khoảng cách giữa các nút */
+        }
+
+        /* Định dạng chung cho cả hai nút */
+        .btn-download, .btn-learn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer; /* Hiển thị con trỏ khi rê chuột */
+            border-radius: 5px; /* Bo góc nút */
+            transition: 0.3s; /* Hiệu ứng hover */
+            border: 1px solid #ccc; /* Viền xám nhạt */
+        }
+
+        /* Định dạng nút Download */
+        .btn-download {
+            background-color: #007bff; /* Màu xanh dương */
+            color: white;
+            border: none;
+        }
+
+        /* Khoảng cách giữa icon và chữ trong nút Download */
+        .btn-download i {
+            margin-right: 8px;
+        }
+
+        /* Hiệu ứng hover khi rê chuột vào nút Download */
+        .btn-download:hover {
+            background-color: #0056b3; /* Màu xanh đậm hơn */
+        }
+
+        /* Định dạng nút Learn More */
+        .btn-learn {
+            background-color: white;
+            color: #333;
+        }
+
+        /* Hiệu ứng hover khi rê chuột vào nút Learn More */
+        .btn-learn:hover {
+            background-color: #f1f1f1; /* Màu xám nhạt hơn */
+        }
+
+        /* Định dạng phần footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #f1f1f1; /* Màu nền xám nhạt */
+        }
+
+        /* Chứa các icon mạng xã hội */
+        .social-icons {
+            margin-bottom: 10px; /* Khoảng cách dưới */
+        }
+
+        /* Định dạng icon mạng xã hội */
+        .social-icons i {
+            font-size: 20px;
+            margin: 0 10px; /* Khoảng cách giữa các icon */
+            color: #666; /* Màu xám nhạt */
+            transition: 0.3s; /* Hiệu ứng hover */
+            cursor: pointer; /* Hiển thị con trỏ */
+        }
+
+        /* Hiệu ứng hover cho icon mạng xã hội */
+        .social-icons i:hover {
+            color: #007bff; /* Chuyển sang màu xanh dương */
+        }
+
+        /* Định dạng dòng bản quyền */
+        .copyright {
+            font-size: 14px;
+            color: #777; /* Màu xám nhạt */
+        }
+
+        /* Định dạng liên kết trong footer */
+        .copyright a {
+            color: #666;
+            text-decoration: none;
+            border-bottom: 1px dotted #999; /* Gạch chân chấm chấm */
+            padding-bottom: 2px;
+        }
+
+        /* Hiệu ứng hover cho liên kết */
+        .copyright a:hover {
+            text-decoration: none;
+            border-bottom: 1px solid #666; /* Gạch chân liền nét */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Magna leo sapien gravida</h1> <!-- Tiêu đề chính -->
+        <p>Gravida at leo elementum elit fusce accumsan dui libero, quis vehicula lectus ultricies eu. In convallis amet leo sapien iaculis efficitur.</p> <!-- Đoạn mô tả -->
+        <div class="separator"></div> <!-- Thanh ngăn cách -->
+
+        <div class="buttons">
+            <!-- Nút Download có icon -->
+            <button class="btn-download">
+                <i class="fa fa-download"></i> Download
+            </button>
+            <!-- Nút Learn More -->
+            <button class="btn-learn">Learn More</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <!-- Biểu tượng mạng xã hội -->
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p class="copyright">
+            © Untitled. Credits: 
+            <a href="#">HTML5 UP</a> + <a href="#">Unsplash</a> <!-- Liên kết bản quyền -->
+        </p>
+    </footer>
+</body>
+</html>

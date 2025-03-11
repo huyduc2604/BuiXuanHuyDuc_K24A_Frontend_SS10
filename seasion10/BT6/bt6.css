@@ -1,0 +1,197 @@
+/* Đặt lại các thuộc tính mặc định của trình duyệt và thiết lập font chữ chung */
+* {
+  margin: 0; /* Loại bỏ khoảng cách bên ngoài */
+  padding: 0; /* Loại bỏ khoảng cách bên trong */
+  box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước phần tử */
+  font-family: Arial, sans-serif; /* Thiết lập font chữ chung */
+}
+
+/* Thiết lập bố cục chung cho trang */
+body {
+  display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  min-height: 100vh; /* Chiều cao tối thiểu bằng chiều cao màn hình */
+  background-color: #f5f5f5; /* Màu nền xám nhạt */
+  padding: 20px; /* Tạo khoảng cách bao quanh nội dung */
+}
+
+/* Vùng chứa slider */
+.slider-wrapper {
+  max-width: 1200px; /* Đặt giới hạn chiều rộng */
+  width: 100%; /* Đảm bảo chiếm hết chiều rộng có thể */
+}
+
+/* Vùng chứa các slide */
+.slider-container {
+  width: 100%;
+  position: relative; /* Giữ vị trí để có thể đặt các phần tử chồng lên nhau */
+  overflow: hidden; /* Ẩn nội dung bị tràn */
+  border-radius: 12px 12px 0 0; /* Bo tròn góc trên */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+/* Mỗi slide */
+.slide {
+  width: 100%;
+  position: relative; /* Cần để hiển thị overlay chồng lên */
+}
+
+/* Ảnh trong slide */
+.slide-image {
+  width: 100%; /* Đảm bảo ảnh luôn đầy đủ chiều rộng */
+  height: 500px; /* Cố định chiều cao */
+  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+  display: block; /* Loại bỏ khoảng cách thừa */
+}
+
+/* Lớp phủ mờ phía trên ảnh */
+.slide-overlay {
+  position: absolute; /* Đặt chồng lên ảnh */
+  top: 0;             /* Đặt ở phía trên cùng */
+  left: 0;            /* Đặt ở phía trái cùng */
+  width: 100%;        /* Đảm bảo chiều rộng bằng slide */
+  height: 100%;       /* Đảm bảo chiều cao bằng slide */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7)); /* Hiệu ứng mờ dần */
+  padding: 30px; /* Khoảng cách nội dung bên trong */
+  display: flex;
+  flex-direction: column; /* Xếp nội dung theo cột */
+  justify-content: flex-start; /* Căn nội dung lên trên */
+}
+
+/* Nhãn danh mục bài viết */
+.category {
+  display: inline-block; /* Hiển thị dạng khối nội tuyến */
+  padding: 8px 16px; /* Tạo khoảng cách bên trong */
+  background-color: transparent; /* Nền trong suốt */
+  color: white; /* Màu chữ trắng */
+  border: 1px solid white; /* Viền trắng */
+  font-size: 14px;
+  margin-bottom: 20px; /* Khoảng cách dưới */
+  align-self: flex-start; /* Căn sang trái */
+}
+
+/* Nguồn tin */
+.source {
+  color: rgba(255, 255, 255, 0.8); /* Màu chữ trắng nhạt */
+  font-size: 16px;
+  margin-top: auto; /* Đẩy về cuối */
+  margin-bottom: 10px;
+}
+
+/* Tiêu đề chính */
+.headline {
+  width: 70%; /* Chiếm 70% chiều rộng */
+  
+  color: white;
+  font-size: 32px; /* Cỡ chữ lớn */
+  font-weight: bold; /* Chữ đậm */
+  line-height: 1.2; /* Giãn dòng */
+  margin-bottom: 15px;
+  text-transform: uppercase; /* Chuyển thành chữ in hoa */
+}
+
+/* Tiêu đề phụ */
+.subheadline {
+  width: 70%; /* Chiếm 70% chiều rộng */
+  color: rgba(255, 255, 255, 0.9); /* Màu chữ trắng hơi mờ */
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Điều khiển slider */
+.slider-controls {
+  display: flex;
+  justify-content: end; /* Căn phải */
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #fff; /* Nền trắng */
+  border-radius: 0 0 12px 12px; /* Bo tròn góc dưới */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+/* Nút chuyển slide */
+.arrow {
+  width: 36px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Biểu tượng con trỏ */
+  color: white;
+  font-size: 24px;
+  user-select: none; /* Không cho chọn văn bản */
+}
+
+/* Nút trước */
+.prev {
+  background-color: #c8c8c8; /* Màu xám nhạt */
+}
+
+/* Nút tiếp theo */
+.next {
+  background-color: #282828; /* Màu đen */
+}
+
+/* Thanh phân trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+/* Chỉ mục trang */
+.page-indicator {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* Hình tròn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #a8a3a3;
+  font-size: 14px;
+  /* background-color: rgba(150, 150, 150, 0.5); Màu xám nhạt */
+}
+
+/* Chỉ mục trang đang được chọn */
+.page-indicator.active {
+  background-color: #222; /* Màu đen */
+}
+
+/* Responsive cho màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .headline {
+      font-size: 24px; /* Thu nhỏ kích thước tiêu đề */
+  }
+
+  .subheadline {
+      font-size: 16px; /* Thu nhỏ tiêu đề phụ */
+  }
+
+  .slide-image {
+      height: 400px; /* Giảm chiều cao ảnh */
+  }
+}
+
+/* Responsive cho màn hình nhỏ hơn 480px */
+@media (max-width: 480px) {
+  .headline {
+      font-size: 20px; /* Tiếp tục giảm kích thước tiêu đề */
+  }
+
+  .subheadline {
+      font-size: 14px; /* Giảm cỡ chữ tiêu đề phụ */
+  }
+
+  .slide-image {
+      height: 350px; /* Giảm chiều cao ảnh */
+  }
+
+  .slide-overlay {
+      padding: 15px; /* Giảm padding để vừa màn hình nhỏ */
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bt6</title>
+  <!-- Kết nối file CSS bên ngoài để tạo kiểu -->
+  <link rel="stylesheet" href="./bt6.css">
+</head>
+<body>
+  <!-- Wrapper chính của slider -->
+  <div class="slider-wrapper">
+    
+    <!-- Phần chứa các slide -->
+    <div class="slider-container">
+      
+      <!-- Slide 1 -->
+      <div class="slide">
+        
+        <!-- Hình ảnh nền của slide -->
+        <img src="https://www.vfx-animation.vn/wp-content/uploads/2023/03/02_Lionel-Messi-hop-tac-cung-Sony-Music-Entertainment.jpg" 
+             alt="Football news" class="slide-image">
+        
+        <!-- Lớp phủ chứa nội dung của slide -->
+        <div class="slide-overlay">
+          <!-- Thẻ hiển thị danh mục tin tức -->
+          <span class="category">Football</span>
+          
+          <!-- Phần đệm để đẩy nội dung xuống dưới -->
+          <div style="flex-grow: 1;"></div>
+          
+          <!-- Nguồn tin tức và ngày xuất bản -->
+          <p class="source">Agence France-Presse - 04 June 2023</p>
+          
+          <!-- Tiêu đề chính của tin tức -->
+          <h2 class="headline">Lionel Messi leaving Ligue 1 team Paris Saint-Germain, club confirms</h2>
+          
+          <!-- Tiêu đề phụ -->
+          <p class="subheadline">The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+        </div>
+      </div>
+      
+    </div> <!-- Kết thúc slider-container -->
+    
+    <!-- Phần điều khiển slider -->
+    <div class="slider-controls">
+      <!-- Mũi tên quay lại (Previous) -->
+      <div class="arrow prev">←</div>
+      
+      <!-- Chỉ báo trang (Pagination) -->
+      <div class="pagination">
+        <div class="page-indicator active">1</div> <!-- Trang đang active -->
+        <div class="page-indicator">2</div>
+        <div class="page-indicator">3</div>
+        <div class="page-indicator">4</div>
+      </div>
+      
+      <!-- Mũi tên tiếp theo (Next) -->
+      <div class="arrow next">→</div>
+    </div>
+    
+  </div> <!-- Kết thúc slider-wrapper -->
+</body>
+</html>

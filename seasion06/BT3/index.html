@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio của TSUBASA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex; /* hiển thị theo chiều ngang */
+            justify-content: space-between; /* căn giữa */
+            align-items: center; /* căn giữa */
+            background: #212529; /* màu nền */
+            padding: 15px 50px; /* tạo khoảng cách 15px ở trên và dưới, 50px ở trái và phải */
+            color: white;     /* màu chữ trắng */
+        }
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: bold; /* chữ đậm */
+        }
+
+        nav ul {
+            list-style: none; /* bỏ dấu chấm tròn */
+            display: flex;    /* hiển thị theo chiều ngang */
+            gap: 20px;        /* tạo khoảng cách 20px giữa các phần tử */
+        }
+
+        nav ul li {
+            display: inline; /* hiển thị theo chiều ngang */
+        }
+
+        nav ul li a {
+            text-decoration: none;  /* bỏ gạch chân */
+            color: white;         /* màu chữ trắng */
+            font-weight: bold;      /* chữ đậm */
+        }
+
+        /* Header */
+        header {
+            background: #E9ECEF;
+            text-align: center;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            align-items: center; /* cho đoạn văn bản ở giữa */
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        header h1 {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            margin-top: 0px;
+        }
+
+        /* Dự án */
+        .projects{
+            padding: 40px 30px; /* tạo khoảng cách 40px ở trên và dưới, 30px ở trái và phải */
+        }
+
+        .section-title{
+            font-size: 22px;    /* kích thước chữ */
+            margin-bottom: 20px; /* tạo khoảng cách 20px ở dưới */
+            font-weight: bold;  /* chữ đậm */
+        }
+
+        .project-grid {    
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #252a32;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Footer */
+        footer {
+            background: #E9ECEF;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav>
+        <div class="logo">Portfolio của TSUBASA</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Giới thiệu bản thân -->
+    <header>
+        <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/02/avatar-anh-meo-cute-3.jpg" alt="Avatar của TSUBASA">
+        <h1>Xin chào! Tôi là&nbsp <b>HUYDUC</b>, một nhà phát triển web sáng tạo.</h1>
+    </header>
+
+    <!-- Dự án -->
+    <section class="projects">
+        <h2 class="section-title">Dự án của tôi</h2>
+        <div class="project-grid">
+            <div class="project-card">Dự án 1</div>
+            <div class="project-card">Dự án 2</div>
+            <div class="project-card">Dự án 3</div>
+            <div class="project-card">Dự án 4</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Kết nối với tôi trên <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+    </footer>
+</body>
+</html>
